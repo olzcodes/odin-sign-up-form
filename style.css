@@ -1,0 +1,80 @@
+html {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  /* border: 1px solid red; */
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: fff;
+  margin: 0px;
+  height: 100vh;
+}
+
+aside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  background-image: url("images/pawel-czerwinski-6lQDFGOB1iw-unsplash.jpeg");
+  background-position: center;
+  background-color: hotpink;
+}
+
+.logo-strip {
+  position: absolute;
+  top: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.4);
+  padding: 1rem;
+}
+
+.logo-strip span {
+  font-family: Norse-Bold;
+  font-size: 3rem;
+  color: white;
+  opacity: 1;
+  padding: 1rem;
+}
+
+img.logo {
+  height: 5rem;
+  padding: 0 1rem 0 1rem;
+}
+
+.image-credits {
+  position: absolute;
+  bottom: 0%;
+  right: 1%;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+  text-align: end;
+}
+
+.image-credits a {
+  color: white;
+}
+
+main {
+  flex: 1.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: plum;
+}
