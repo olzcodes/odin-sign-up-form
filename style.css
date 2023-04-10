@@ -1,6 +1,6 @@
 :root {
   --bg-color-1: black;
-  --bg-color-2: #041c62;
+  --bg-color-2: #171b95;
   --bg-color-3: lavender;
   --text-color-1: turquoise;
   --text-color-2: hotpink;
@@ -175,7 +175,6 @@ button {
   font-weight: bold;
   border: 2px solid var(--accent-color-2);
   border-radius: 8px;
-  box-shadow: 0px 0px 5px var(--accent-color-2);
   cursor: pointer;
   padding: 0.6rem 2rem 0.6rem 2rem;
   margin: 0.5rem 0 0.5rem 0;
@@ -184,6 +183,7 @@ button {
 button:hover {
   background-color: var(--bg-color-2);
   color: white;
+  box-shadow: 0px 0px 5px var(--accent-color-2);
 }
 
 @media only screen and (min-width: 800px) {
