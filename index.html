@@ -16,24 +16,18 @@
       <span class="logo-heading">ODIN</span>
     </div>
     <div class="image-credits">
-      Photo by <a
-        href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel
-        Czerwinski</a> on <a
-        href="https://unsplash.com/wallpapers/cool/abstract?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
+      Photo by <a href="https://twitter.com/TokyoLuv/status/1644119742784106496" target="_blank">TokyoLuv</a></a>
     </div>
   </aside>
   <main>
     <section class="main-header">
-      <p>This is not a real online service! You know you need something like this in your life to help you realize your
-        deepest dreams.</p>
-      <p>Sign up now to get started.</p>
-      <br>
-      <p>You <i>know</i> you want to.</p>
+      <p>We are the <span class="opc">Odin Photography Club</span>. <br>A community for one-eyed photographers.
     </section>
-    <section class="main-form">
-      <h2>Let's do this!</h2>
-      <form action="https://httpbin.org/post" method="post">
+    <section class="main-middle">
+      <p>Sign up <i>now</i>
+        to become a
+        member!</p>
+      <form id="sign-up" action="https://httpbin.org/post" method="post">
         <div class="form-row">
           <label for="first_name">FIRST NAME</label>
           <input id="first_name" name="first_name" type="text">
@@ -58,13 +52,11 @@
           <label for="confirm_password">CONFIRM PASSWORD</label>
           <input id="confirm_passowrd" name="confirm_password" type="password">
         </div>
-        <div class="form-row">
-          <button>Create Account</button>
-        </div>
-        <div class="form-row">
-          <p>Already have an account? <a href="/login">Log in</a></p>
-        </div>
       </form>
+    </section>
+    <section class="main-bottom">
+      <button form="sign-up" type="submit">Create Account</button>
+      <p>Already have an account? <a href="/login">Log in</a></p>
     </section>
   </main>
 </body>
