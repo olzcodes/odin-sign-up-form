@@ -1,18 +1,7 @@
 :root {
-  --bg-color-1: mediumpurple;
-  --bg-color-2: plum;
-  --bg-color-3: white;
-  --text-color-1: turquoise;
-  --text-color-2: hotpink;
-  --accent-color-1: indigo;
-  --accent-color-2: cyan;
-  --button-color-1: hotpink;
-}
-
-:root {
   --bg-color-1: black;
-  --bg-color-2: darkslategray;
-  --bg-color-3: white;
+  --bg-color-2: #00111b;
+  --bg-color-3: lavender;
   --text-color-1: turquoise;
   --text-color-2: hotpink;
   --accent-color-1: indigo;
@@ -55,7 +44,6 @@ aside {
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  background-image: url("images/pawel-czerwinski-6lQDFGOB1iw-unsplash.jpeg");
   background-image: url("images/shibuya-aerial.jpg");
   background-size: 700px 500px;
   background-position: center;
@@ -198,7 +186,7 @@ button:hover {
   color: white;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
   main {
     flex: 1.5;
     padding: 0;
