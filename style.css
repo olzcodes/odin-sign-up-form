@@ -158,12 +158,12 @@ input:focus {
 
 input + span {
   position: relative;
-  left: -15px;
-  top: -20px;
 }
 
 input + span::after {
   position: absolute;
+  left: -15px;
+  top: -20px;
 }
 
 input.error:valid + span::after {
