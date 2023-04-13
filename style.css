@@ -184,7 +184,7 @@ input.nomatch + span::before {
 .password-message,
 .confirm-password-message {
   position: relative;
-  top: -18px;
+  top: -16px;
   left: 2px;
   color: yellow;
   font-size: small;
