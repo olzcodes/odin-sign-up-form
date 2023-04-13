@@ -160,20 +160,34 @@ input + span {
   position: relative;
 }
 
-input + span::after {
+input + span::before {
   position: absolute;
   left: -15px;
-  top: -20px;
+  top: -22px;
 }
 
-input.error:valid + span::after {
+input.error:valid + span::before {
   content: "✓";
   color: cyan;
 }
 
-input.error:required:invalid + span::after {
+input.error:required:invalid + span::before {
   content: "✖";
   color: red;
+}
+
+input.nomatch + span::before {
+  content: "✖";
+  color: red;
+}
+
+.password-message,
+.confirm-password-message {
+  position: relative;
+  top: -18px;
+  left: 2px;
+  color: yellow;
+  font-size: small;
 }
 
 .main-bottom {
@@ -237,6 +251,7 @@ button:focus {
 
   .form-row {
     width: 50%;
+    height: 58px;
   }
 
   .main-bottom {
