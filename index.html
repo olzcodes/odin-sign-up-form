@@ -46,13 +46,14 @@
         </div>
         <div class="form-row">
           <label for="password">PASSWORD</label>
-          <input id="password" name="password" type="password" minlength="8" required><span
-            class="password-message"></span>
+          <input id="password" name="password" type="password" minlength="6" maxlength="12" required><span></span>
+          <div class="password-message"></div>
         </div>
-        <div class="form">
+        <div class="form-row">
           <label for="confirm_password">CONFIRM PASSWORD</label>
-          <input id="confirm_password" name="confirm_password" minlength="8" type="password" required><span
-            class="password-message"></span>
+          <input id="confirm_password" name="confirm_password" type="password" minlength="6" maxlength="12"
+            required><span></span>
+          <div class="confirm-password-message"></div>
         </div>
       </form>
     </section>
