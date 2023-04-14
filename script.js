@@ -32,7 +32,6 @@ document.addEventListener("keyup", function () {
 
 document.addEventListener("keyup", function () {
   if (passwordInput.value === "" || confirmPasswordInput.value === "") return;
-  if (confirmPasswordInput.value.length < passwordInput.value.length) return;
   if (confirmPasswordInput.value !== passwordInput.value) {
     confirmPasswordMessageEl.textContent = `Passwords do not match`;
     confirmPasswordInput.classList.remove("error");
@@ -41,6 +40,7 @@ document.addEventListener("keyup", function () {
   } else if (confirmPasswordInput.value === passwordInput.value) {
     confirmPasswordMessageEl.textContent = "";
     confirmPasswordInput.classList.add("error");
+    confirmPasswordInput.classList.remove("nomatch");
     submitBtn.disabled = false;
   }
 });
