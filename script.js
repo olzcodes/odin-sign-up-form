@@ -30,14 +30,35 @@ document.addEventListener("keyup", function () {
   }
 });
 
-document.addEventListener("keyup", function () {
+confirmPasswordInput.addEventListener("keyup", function () {
   if (passwordInput.value === "" || confirmPasswordInput.value === "") return;
-  if (confirmPasswordInput.value !== passwordInput.value) {
+  if (
+    confirmPasswordInput.value[confirmPasswordInput.value.length - 1] !==
+    passwordInput.value[confirmPasswordInput.value.length - 1]
+  ) {
     confirmPasswordMessageEl.textContent = `Passwords do not match`;
     confirmPasswordInput.classList.remove("error");
     confirmPasswordInput.classList.add("nomatch");
     submitBtn.disabled = true;
-  } else if (confirmPasswordInput.value === passwordInput.value) {
+  } else {
+    confirmPasswordMessageEl.textContent = "";
+    confirmPasswordInput.classList.add("error");
+    confirmPasswordInput.classList.remove("nomatch");
+    submitBtn.disabled = false;
+  }
+});
+
+passwordInput.addEventListener("keyup", function () {
+  if (passwordInput.value === "" || confirmPasswordInput.value === "") return;
+  if (
+    confirmPasswordInput.value[passwordInput.value.length - 1] !==
+    passwordInput.value[passwordInput.value.length - 1]
+  ) {
+    confirmPasswordMessageEl.textContent = `Passwords do not match`;
+    confirmPasswordInput.classList.remove("error");
+    confirmPasswordInput.classList.add("nomatch");
+    submitBtn.disabled = true;
+  } else {
     confirmPasswordMessageEl.textContent = "";
     confirmPasswordInput.classList.add("error");
     confirmPasswordInput.classList.remove("nomatch");
