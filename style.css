@@ -4,9 +4,9 @@
   --bg-color-3: lavender;
   --text-color-1: turquoise;
   --text-color-2: hotpink;
-  --accent-color-1: indigo;
-  --accent-color-2: cyan;
-  --button-color-1: hotpink;
+  --text-color-3: indigo;
+  --accent-color-1: cyan;
+  --accent-color-2: hotpink;
 }
 
 @font-face {
@@ -134,7 +134,7 @@ main {
 
 label {
   display: block;
-  color: var(--accent-color-2);
+  color: var(--accent-color-1);
   font-size: small;
   margin-bottom: 2px;
 }
@@ -144,7 +144,7 @@ input {
   width: 200px;
   font-size: 1rem;
   background-color: var(--bg-color-3);
-  border: 1px solid var(--bg-color-1);
+  border: 1px solid var(--text-color-3);
   outline: 1px solid var(--bg-color-1);
   border-radius: 5px;
   padding: 0.3rem;
@@ -157,7 +157,7 @@ input:focus {
 }
 
 input:valid:focus {
-  box-shadow: 0px 0px 12px var(--accent-color-2);
+  box-shadow: 0px 0px 12px var(--accent-color-1);
   outline: none;
 }
 
@@ -212,10 +212,10 @@ input.nomatch + span::before {
 }
 
 button {
-  background-color: var(--button-color-1);
-  color: var(--accent-color-1);
+  background-color: var(--accent-color-2);
+  color: var(--text-color-3);
   font-weight: bold;
-  border: 2px solid var(--accent-color-2);
+  border: 2px solid var(--accent-color-1);
   border-radius: 8px;
   cursor: pointer;
   padding: 0.6rem 2rem 0.6rem 2rem;
@@ -225,12 +225,12 @@ button {
 button:hover {
   background-color: var(--bg-color-2);
   color: white;
-  box-shadow: 0px 0px 5px var(--accent-color-2);
+  box-shadow: 0px 0px 5px var(--accent-color-1);
 }
 
 button:focus {
   outline: none;
-  box-shadow: 0px 0px 8px var(--accent-color-2);
+  box-shadow: 0px 0px 8px var(--accent-color-1);
 }
 
 .message-strip {
