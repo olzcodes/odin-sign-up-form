@@ -156,7 +156,22 @@ input:focus {
   outline: none;
 }
 
+input:valid {
+  box-shadow: 0px 0px 12px var(--accent-color-1);
+  outline: none;
+}
+
 input:valid:focus {
+  box-shadow: 0px 0px 12px var(--accent-color-1);
+  outline: none;
+}
+
+input[type="tel"]:placeholder-shown {
+  box-shadow: none;
+  outline: 1px solid var(--bg-color-1);
+}
+
+input[type="tel"]:placeholder-shown:focus {
   box-shadow: 0px 0px 12px var(--accent-color-1);
   outline: none;
 }
@@ -186,10 +201,20 @@ input.nomatch + span::before {
   color: red;
 }
 
+input.nomatch {
+  box-shadow: 0px 0px 12px var(--text-color-2);
+  outline: none;
+}
+
+input.nomatch:focus {
+  box-shadow: 0px 0px 12px var(--text-color-2);
+  outline: none;
+}
+
 .password-message,
 .confirm-password-message {
   position: relative;
-  top: -16px;
+  top: -14px;
   left: 2px;
   color: yellow;
   font-size: small;
