@@ -30,12 +30,17 @@ document.addEventListener("keyup", function () {
   }
 });
 
+const passwordsMatching = function (input) {
+  let currentIndex = input.value.length - 1;
+  return (
+    passwordInput.value[currentIndex] ===
+    confirmPasswordInput.value[currentIndex]
+  );
+};
+
 confirmPasswordInput.addEventListener("keyup", function () {
   if (passwordInput.value === "" || confirmPasswordInput.value === "") return;
-  if (
-    confirmPasswordInput.value[confirmPasswordInput.value.length - 1] !==
-    passwordInput.value[confirmPasswordInput.value.length - 1]
-  ) {
+  if (!passwordsMatching(confirmPasswordInput)) {
     confirmPasswordMessageEl.textContent = `Passwords do not match`;
     confirmPasswordInput.classList.remove("error");
     confirmPasswordInput.classList.add("nomatch");
@@ -50,10 +55,7 @@ confirmPasswordInput.addEventListener("keyup", function () {
 
 passwordInput.addEventListener("keyup", function () {
   if (passwordInput.value === "" || confirmPasswordInput.value === "") return;
-  if (
-    confirmPasswordInput.value[passwordInput.value.length - 1] !==
-    passwordInput.value[passwordInput.value.length - 1]
-  ) {
+  if (!passwordsMatching(passwordInput)) {
     confirmPasswordMessageEl.textContent = `Passwords do not match`;
     confirmPasswordInput.classList.remove("error");
     confirmPasswordInput.classList.add("nomatch");
