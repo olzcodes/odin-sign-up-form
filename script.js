@@ -3,7 +3,6 @@ const inputs = document.querySelectorAll("input");
 inputs.forEach((input) =>
   input.addEventListener("invalid", function () {
     input.classList.add("error");
-    console.log("Added");
   })
 );
 
@@ -23,10 +22,8 @@ document.addEventListener("keyup", function () {
   if (passwordInput.value.length > 0 && passwordInput.value.length < 6) {
     passwordMessageEl.textContent = `Password must be between ${passwordMinLength} and ${passwordMaxLength} characters`;
     passwordInput.classList.add("error");
-    submitBtn.disabled = true;
   } else {
     passwordMessageEl.textContent = "";
-    submitBtn.disabled = false;
   }
 });
 
@@ -44,19 +41,26 @@ const passwordsMatching = function (input) {
   );
 };
 
+const toggleSubmitBtn = function () {
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    submitBtn.disabled = true;
+  } else {
+    submitBtn.disabled = false;
+  }
+};
+
 confirmPasswordInput.addEventListener("keyup", function () {
   if (passwordInput.value === "" || confirmPasswordInput.value === "") return;
   if (!passwordsMatching(confirmPasswordInput)) {
     confirmPasswordMessageEl.textContent = `Passwords do not match`;
     confirmPasswordInput.classList.remove("error");
     confirmPasswordInput.classList.add("nomatch");
-    submitBtn.disabled = true;
   } else {
     confirmPasswordMessageEl.textContent = "";
     confirmPasswordInput.classList.add("error");
     confirmPasswordInput.classList.remove("nomatch");
-    submitBtn.disabled = false;
   }
+  toggleSubmitBtn();
 });
 
 passwordInput.addEventListener("keyup", function () {
@@ -65,11 +69,10 @@ passwordInput.addEventListener("keyup", function () {
     confirmPasswordMessageEl.textContent = `Passwords do not match`;
     confirmPasswordInput.classList.remove("error");
     confirmPasswordInput.classList.add("nomatch");
-    submitBtn.disabled = true;
   } else {
     confirmPasswordMessageEl.textContent = "";
     confirmPasswordInput.classList.add("error");
     confirmPasswordInput.classList.remove("nomatch");
-    submitBtn.disabled = false;
   }
+  toggleSubmitBtn();
 });
