@@ -31,6 +31,12 @@ document.addEventListener("keyup", function () {
 });
 
 const passwordsMatching = function (input) {
+  if (
+    passwordInput.value.length === confirmPasswordInput.value.length &&
+    passwordInput.value !== confirmPasswordInput.value
+  )
+    return false;
+
   let currentIndex = input.value.length - 1;
   return (
     passwordInput.value[currentIndex] ===
