@@ -2,7 +2,7 @@
 
 **LIVE DEMO: https://olzcodes.github.io/odin-sign-up-form/**
 
-The aim of this project was to build a basic sign-up form based on the provided format.
+The aim of this project was to build a basic sign-up form based on the prescribed format.
 
 ## Screenshots
 
