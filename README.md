@@ -6,9 +6,9 @@ The aim of this project was to build a basic sign-up form based on the provided 
 
 ## Screenshots
 
-![screenshot on mobile device](./screenshots/screenshot-mobile.png)
+![screenshot on mobile device](./screenshots/screenshot-mobile-2.png)
 
-![screenshot on large screen device](./screenshots/screenshot-desktop.png)
+![screenshot on large screen device](./screenshots/screenshot-desktop-2.png)
 
 ## What I learned from this project
 
