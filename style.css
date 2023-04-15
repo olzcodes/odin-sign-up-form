@@ -166,6 +166,11 @@ input:valid:focus {
   outline: none;
 }
 
+input.error:invalid {
+  box-shadow: 0px 0px 12px var(--accent-color-2);
+  outline: none;
+}
+
 input[type="tel"]:placeholder-shown {
   box-shadow: none;
   outline: 1px solid var(--bg-color-1);
@@ -214,6 +219,7 @@ input.nomatch:focus {
 .password-message,
 .confirm-password-message {
   position: relative;
+  width: 200px;
   top: -14px;
   left: 2px;
   color: yellow;
