@@ -34,11 +34,11 @@ const passwordsMatching = function (input) {
   )
     return false;
 
-  if (passwordInput.value.length >= 6) {
-    if (passwordInput.value !== confirmPasswordInput.value) return false;
-  }
-
   let currentIndex = input.value.length - 1;
+  console.log(
+    passwordInput.value[currentIndex],
+    confirmPasswordInput.value[currentIndex]
+  );
   return (
     passwordInput.value[currentIndex] ===
     confirmPasswordInput.value[currentIndex]
