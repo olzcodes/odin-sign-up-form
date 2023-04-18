@@ -45,7 +45,7 @@ aside {
   align-items: center;
   flex: 1;
   background-image: url("images/shibuya-aerial.jpg");
-  background-size: 700px 467px;
+  background-size: 700px auto;
   background-position: center;
   background-color: black;
 }
@@ -306,5 +306,11 @@ button:focus {
 
   .main-bottom {
     margin: 0 2.5rem 0 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  aside {
+    background-size: 100% auto;
   }
 }
